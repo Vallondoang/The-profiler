@@ -26,7 +26,7 @@ def reset():
 
         print(query)
 
-        for j in search (query ,tld="co.in", num=20, pause=2):
+        for j in search (query ,tld="co.in", num=20,stop=20 , pause=2):
             print(j)
         
     if inputcommand == "1":
@@ -35,7 +35,7 @@ def reset():
         query = '"' + input() + '"'
  
         print(query)
-        for j in search(query, tld="co.in", num=20, pause=2):
+        for j in search(query, tld="co.in", num=20,stop=20 , pause=2):
             print(j)
 
     if inputcommand == "00":
