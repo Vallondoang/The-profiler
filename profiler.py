@@ -13,8 +13,7 @@ def reset():
     inputcommand = input()
     if inputcommand == "2":
         print("insert keyword")
-        print("dont forget to add quotation mark in the sentences for more accurate search")
-        keyword = input()
+        keyword = '"' + input() + '"'
         print("insert spesific site")
         print("leave blank if you dont use it")
         insiteword = input()
@@ -27,14 +26,15 @@ def reset():
 
         print(query)
 
-        for j in search(query, tld="co.in", num=20, pause=2):
+        for j in search (query ,tld="co.in", num=20, pause=2):
             print(j)
         
     if inputcommand == "1":
         print("insert keyword")
         print("dont forget to add quotation mark in the sentences for spesific result")
-        query = input()
+        query = '"' + input() + '"'
  
+        print(query)
         for j in search(query, tld="co.in", num=20, pause=2):
             print(j)
 
