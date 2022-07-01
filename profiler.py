@@ -2,14 +2,16 @@ try:
     from googlesearch import search
 except ImportError:
     print("No module named 'google' found")
+    print("type <pip install google>")
 
 def reset():
     print("The Profiler 0.1")
     print("pick tools:")
-    print("1.google dorking")
+    print("1.google database search")
+    print("2.in depth google database search")
     print("00.exit")
     inputcommand = input()
-    if inputcommand == "1":
+    if inputcommand == "2":
         print("insert keyword")
         print("dont forget to add quotation mark in the sentences for more accurate search")
         keyword = input()
@@ -25,9 +27,16 @@ def reset():
 
         print(query)
 
-        for j in search(query, tld="co.in", num=10, stop=10, pause=2):
+        for j in search(query, tld="co.in", num=20, pause=2):
             print(j)
         
+    if inputcommand == "1":
+        print("insert keyword")
+        print("dont forget to add quotation mark in the sentences for spesific result")
+        query = input()
+ 
+        for j in search(query, tld="co.in", num=20, pause=2):
+            print(j)
 
     if inputcommand == "00":
         print("good luck")
