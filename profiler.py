@@ -1,45 +1,37 @@
 try:
     from googlesearch import search
 except ImportError:
-    print("No module named 'google' found")
-    print("type <pip install google>")
+    print("no google module detected")
 
-def reset():
-    print("The Profiler 0.1")
-    print("pick tools:")
-    print("1.google database search")
-    print("2.in depth google database search")
+print(" _____ _            ____             __ _ _              ___   _")
+print("|_   _| |__   ___  |  _ \ _ __ ___  / _(_) | ___ _ __   / _ \ / |")
+print("  | | | '_ \ / _ \ | |_) | '__/ _ \| |_| | |/ _ \ '__| | | | || |")
+print("  | | | | | |  __/ |  __/| | | (_) |  _| | |  __/ |    | |_| || |")
+print("  |_| |_| |_|\___| |_|   |_|  \___/|_| |_|_|\___|_|     \___(_)_|")
+def repeat():
+    print("1.google search")
+    print("2.help")
     print("00.exit")
-    inputcommand = input()
-    if inputcommand == "2":
+    print("insert number:")
+    pick = input()
+    if pick == "1":
         print("insert keyword")
-        keyword = '"' + input() + '"'
-        print("insert spesific site")
-        print("leave blank if you dont use it")
-        insiteword = input()
-        insite = "site:" + insiteword
-        print("insert what are you looking for in the site")
-        print("leave blank if you dont use it")
-        inurlword = input()
-        inurl = "inurl:" + inurlword
-        query = keyword + " " + insite + " " + inurl
-
+        query = input()
+        print("the last result to retrieve. keep blank to keep searching forever.")
+        searchtotal = input()
+        if searchtotal == '':
+            searchtotal = '0'
         print(query)
-
-        for j in search (query ,tld="co.in", num=20,stop=20 , pause=2):
+        for j in search(query,num=int(searchtotal), pause=3):
             print(j)
-        
-    if inputcommand == "1":
-        print("insert keyword")
-        print("dont forget to add quotation mark in the sentences for spesific result")
-        query = '"' + input() + '"'
- 
-        print(query)
-        for j in search(query, tld="co.in", num=20,stop=20 , pause=2):
-            print(j)
-
-    if inputcommand == "00":
-        print("good luck")
+    if pick == "2":
+        print("use site: in the query to search in spesific site")
+        print("use inurl to search spesific thing inside of the url")
+        print('Enter " in the beginning and end for spesific keyword order')
+        print('example: <"admin" site:microsoft.com inurl:guide filetype:pdf>')
+    if pick == "1":
+        print("Good bye")
         exit()
+
 while True:
-    reset()
+    repeat()
