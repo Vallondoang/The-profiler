@@ -29,7 +29,7 @@ def repeat():
         print("use inurl to search spesific thing inside of the url")
         print('Enter " in the beginning and end for spesific keyword order')
         print('example: <"admin" site:microsoft.com inurl:guide filetype:pdf>')
-    if pick == "1":
+    if pick == "00":
         print("Good bye")
         exit()
 
