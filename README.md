@@ -1,5 +1,5 @@
 # The-profiler
-A Private Information digging tools
+simple google search test for linux based os
 
 REQUIREMENTS:
 Google (pip install google)
